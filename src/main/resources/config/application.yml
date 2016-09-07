@@ -1,0 +1,21 @@
+# Disable the spring security default configuration from spring-boot-actuator
+security.basic.enabled: false
+
+endpoints.jolokia.enabled: true
+endpoints.health.sensitive: false
+management.security.enabled: false
+endpoints.info.sensitive: false
+# We're using Dropwizards metricsServlet instead of the less powerful Spring PublicMetrics
+
+server:
+  port: 8082
+  compression.enabled: true
+  compression.mime-types: "text/html,text/xml,text/plain,text/css,application/json,application/xml,application/javascript,image/svg+xml"
+
+
+spring:
+  thymeleaf:
+    mode: HTML5
+#    prefix: "/dist/assets/html/"
+  mvc.favicon.enabled: false # disable standard Spring favicon handler
+

@@ -1,0 +1,35 @@
+<div class="product-list-container" xmlns:th="http://www.thymeleaf.org">
+    <!--th:class="${product.id % 3 !=0} ? 'margin-right'"-->
+    <div class="col-2" th:each="product: ${model}">
+        <a class="product-column"
+
+           th:href="@{'/product/'+${product.id}}">
+        <span class="price-tag" th:if="${product.offer.discount}">
+          <p>ONLY</p>
+          <p>MINS LEFT</p>
+        </span>
+
+            <h1 th:text="${product.name}"></h1>
+
+            <div class="product-img">
+                <span class="special-price-tag" th:if="${product.offer.discount}">SPECIAL PRICE!</span>
+                <img th:src="${product.picture}"/>
+            </div>
+            <div class="product-price">
+                <div class="offer-price" th:if="${product.offer.discount}"
+                     th:text="${product.offer.discountedPrice}"/>
+                <div class="full-price" th:class="${product.offer.discount} ? 'price-strikethrough'"
+                     th:text="${product.price}"/>
+                <br/>
+
+                <p>price incl. vat</p>
+
+                <p>excl. shipping</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+
+
+

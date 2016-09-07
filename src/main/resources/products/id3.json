@@ -1,0 +1,38 @@
+{
+  "id": 3,
+  "name": "LG Electronics 42LB6300 42-Inch 1080p 120Hz Smart LED TV",
+  "description": "The LB6300 begins with exceptionally clear Full HD 1080p resolution and crisp, bright LED backlighting, then adds LGs acclaimed Smart TV features.",
+  "rating": 1,
+  "price": 699,
+  "offer": {
+    "discount": true,
+    "discountedPrice": 499,
+    "countDown": 10
+  },
+  "specifications": {
+    "technical": {
+      "Screen Size": "42 inches",
+      "Backlight Technology": "Direct LED",
+      "Resolution": "1080p (Full HD)",
+      "Refresh Rate": "120Hz, Motion Clarity Index 600",
+      "IPS Panel": "yes",
+      "Smart TV": "Yes, webOS - Netflix, Hulu Plus, YouTube, Amazon Instant Video",
+      "Magic Remote": "yes"
+    },
+    "other": {
+      "Brand Name": "LG",
+      "Model": "42LB6300",
+      "Weight": "21.8 pounds",
+      "Item Dimensions": "L x W x H 37.8 x 8.6 x 24 inches"
+    }
+  },
+  "pictures": {
+    "main": "images/id3/normal/id3_1.jpg",
+    "all": [
+      {
+        "normal": "images/id3/normal/id3_1.jpg",
+        "thumbnail": "images/id3/thumbnails/id3_1t.jpg"
+      }
+    ]
+  }
+}

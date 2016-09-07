@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "name": "Lenovo G50 15.6-Inch Laptop (Core i3, 6 GB, 500 GB)",
+    "description": "The affordable Lenovo G50 notebook is less than 1 inch slim, but packed with features like an integrated DVD drive, the latest processor and HD graphics.",
+    "price": "€ 499.00",
+    "offer": {
+      "discount": true,
+      "discountedPrice": "€ 399.00",
+      "countDown": 15
+    },
+    "picture": "images/id1/normal/id1_1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Apple iPhone 6, Silver, 64 GB",
+    "description": "Built on 64-bit desktop-class architecture, the new A8 chip delivers more power, even while driving a larger display.",
+    "price": "€ 800.00",
+    "offer": {
+      "discount": false
+    },
+    "picture": "images/id2/normal/id2_1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "LG Electronics 42LB6300 42-Inch 1080p 120Hz Smart LED TV",
+    "description": "The LB6300 begins with exceptionally clear Full HD 1080p resolution and crisp, bright LED backlighting, then adds LGs acclaimed Smart TV features.",
+    "price": "€ 699.00",
+    "offer": {
+      "discount": true,
+      "discountedPrice": "€ 499.00",
+      "countDown": 10
+    },
+    "picture": "images/id3/normal/id3_1.jpg"
+  }
+]

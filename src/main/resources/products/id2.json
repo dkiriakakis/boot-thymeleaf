@@ -1,0 +1,37 @@
+{
+  "id": 2,
+  "name": "Apple iPhone 6, Silver, 64 GB",
+  "description": "Built on 64-bit desktop-class architecture, the new A8 chip delivers more power, even while driving a larger display.",
+  "rating": 3,
+  "price": 800,
+  "offer": {
+    "discount": false
+  },
+  "specifications": {
+    "technical": {
+      "Screen Size": "4.7 inches",
+      "Screen Resolution": "1334 x 750",
+      "Chip": "A8 chip with 64-bit architecture",
+      "Camera": "New 8-megapixel iSight camera with 1.5µ pixels",
+      "Video": "1080p HD video recording (30 fps or 60 fps)",
+      "Capacity": "64 GB"
+    },
+    "other": {
+      "Brand Name": "Apple",
+      "Model": "MG4H2B/A",
+      "Operating System": "iOS 8",
+      "Weight": "4.6 pounds",
+      "Item Dimensions": "L x W x H 2.6 x 0.3 x 5.4 inches",
+      "Color": "Silver"
+    }
+  },
+  "pictures": {
+    "main": "images/id2/normal/id2_1.jpg",
+    "all": [
+      {
+        "normal": "images/id2/normal/id2_1.jpg",
+        "thumbnail": "images/id2/thumbnails/id2_1t.jpg"
+      }
+    ]
+  }
+}

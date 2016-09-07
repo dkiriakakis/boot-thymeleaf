@@ -1,0 +1,46 @@
+{
+  "id": 1,
+  "name": "Lenovo G50 15.6-Inch Laptop (Core i3, 6 GB, 500 GB)",
+  "description": "The affordable Lenovo G50 notebook is less than 1 inch slim, but packed with features like an integrated DVD drive, the latest processor and HD graphics.",
+  "rating": 4,
+  "price": 499,
+  "offer": {
+    "discount": true,
+    "discountedPrice": 399,
+    "countDown": 15
+  },
+  "specifications": {
+    "technical": {
+      "Screen Size": "15.6 inches",
+      "Screen Resolution": "1366 x 768",
+      "Max Screen Resolution": "1366x768 pixels",
+      "Processor": "1.9 GHz Intel Core i3",
+      "RAM": "6 GB DDR3",
+      "Memory Speed": "1600 MHz",
+      "Hard Drive": "500 GB SATA",
+      "Wireless Type": "802.11bgn",
+      "USB Ports": 2,
+      "Battery Life": "5 hours"
+    },
+    "other": {
+      "Brand Name": "Lenovo",
+      "Series": "Lenovo",
+      "Model": "59421807",
+      "Operating System": "Windows 8.1",
+      "Weight": "4.6 pounds",
+      "Item Dimensions": "L x W x H 10.43 x 0.98 x 15.12 inches",
+      "Color": "Black",
+      "Processor Brand": "Intel"
+    }
+  },
+  "pictures": {
+    "main": "images/id1/normal/id1_1.jpg",
+    "all": [
+      {
+        "normal": "images/id1/normal/id1_1.jpg",
+        "thumbnail": "images/id1/thumbnails/id1_1t.jpg"
+      }
+    ]
+  }
+
+}
