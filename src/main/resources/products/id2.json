@@ -26,12 +26,12 @@
     }
   },
   "pictures": {
-    "main": "images/id2/normal/id2_1.jpg",
-    "all": [
-      {
-        "normal": "images/id2/normal/id2_1.jpg",
-        "thumbnail": "images/id2/thumbnails/id2_1t.jpg"
-      }
-    ]
+    "main": "../images/id2/normal/id2_1.jpg",
+    "thumbnail": {
+      "1": "../images/id2/thumbnails/id2_1t.jpg",
+      "2": "../images/id2/thumbnails/id2_2t.jpg",
+      "3": "../images/id2/thumbnails/id2_3t.jpg"
+    }
+
   }
 }

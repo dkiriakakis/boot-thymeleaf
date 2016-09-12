@@ -23,6 +23,6 @@ public class ProductController {
         InputStream is = new FileInputStream(new File("src/main/resources/products/id" + id + ".json"));
         model.addAttribute("model", objectMapper.readValue(is, ExtendedProduct.class));
 
-        return "home";
+        return "product-detail";
     }
 }

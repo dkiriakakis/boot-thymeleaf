@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorator="layout">
+<div layout:fragment="content">
+<div class="webshop-container">
+  <div class="product-image-viewer">
+      <div class="product-images">
+        <div class="product-photo active" >
+          <img  th:src="${model.pictures.main}"/>
+        </div>
+      </div>
+      <ul class="product-thumbs">
+        <li>
+          <img th:src="${model.pictures.thumbnail['1']}" />
+            <img th:src="${model.pictures.thumbnail['2']}" />
+            <img th:src="${model.pictures.thumbnail['3']}" />
+        </li>
+      </ul>
+
+      <button class="button basket basket-top">Add to basket</button>
+    </div>
+    
+    <div class="product-info-viewer">
+    <div class="product-info-desc">
+      <h1 th:text="${model.name}"/>
+
+      <h2>Description:</h2>
+      <p th:text="${model.description}"/>
+    </div>
+
+    <div class="product-info-other">
+      <div class="product-info-rating" >
+      <!--In the mockups filling part of the star is being presented but in the json files rating is an integer
+      value, so we assume that it's always an integer.-->
+        <span class="fa fa-star full-star"></span>
+        <span class="fa fa-star full-star"></span>
+        <span class="fa fa-star full-star"></span>
+        <span class="fa fa-star full-star"></span>
+        <span class="fa fa-star"></span>
+        <p>4 out of 5 stars</p>
+      </div>
+        <div>
+            <br class="product-info-price" >
+          <div class="full-price" th:classappend="${model.offer.discount} ? 'price-strikethrough'" th:text="${'&euro; ' + model.price + '.00'}" />
+          </br>
+          <div class="offer-price" th:if="${model.offer.discount}" th:text="${'&euro; ' + model.offer.discountedPrice + '.00'}" />
+
+          <p>price incl. vat</p>
+          <p>excl. shipping</p>
+      </div>
+      <button class="button basket basket-side">Add to basket</button>
+    </div>
+    <div class="spec-list">
+        
+          <div class="spec-stable active">
+              <i class="fa" ng-class="isSpecsShown(0) ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+            Technical Specifications
+          </div>
+          <div class="spec-details">
+            <div class="spec spec-accordion row"
+                 th:each="instance : ${model.specifications.technical}">
+              <div class="col-3" th:text="${instance.key}"></div>
+              <div class="col-3" th:text="${instance.value}"></div>
+            </div>
+          </div>
+          <div class="spec-stable active"
+                    ng-click="toggleSpecs(1)"
+                    ng-class="{active: isSpecsShown(1)}">
+              <i class="fa" ng-class="isSpecsShown(1) ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+            Other Specifications
+          </div>
+          <div class="spec-details">
+            <div class="spec spec-accordion row"
+                 th:each="instance : ${model.specifications.other}"
+                      >
+                <div class="col-3" th:text="${instance.key}"></div>
+                <div class="col-3" th:text="${instance.value}"></div>
+            </div>
+          </div>
+      </div>
+      <a class="button back" th:href="@{/}">Go back</a>
+      <button class="button basket basket-bottom">Add to basket</button>
+</div>
+<div class="webshop-container-end"></div>
+</div>
+</div>
+</html>

@@ -18,7 +18,7 @@
             <div class="product-price">
                 <div class="offer-price" th:if="${product.offer.discount}"
                      th:text="${product.offer.discountedPrice}"/>
-                <div class="full-price" th:class="${product.offer.discount} ? 'price-strikethrough'"
+                <div class="full-price" th:classappend="${product.offer.discount} ? 'price-strikethrough'"
                      th:text="${product.price}"/>
                 <br/>
 
