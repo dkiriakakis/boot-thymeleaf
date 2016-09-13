@@ -1,5 +1,4 @@
-# Disable the spring security default configuration from spring-boot-actuator
-security.basic.enabled: false
+
 
 endpoints.jolokia.enabled: true
 endpoints.health.sensitive: false
