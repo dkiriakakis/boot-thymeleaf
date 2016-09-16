@@ -7,7 +7,7 @@ endpoints.info.sensitive: false
 # We're using Dropwizards metricsServlet instead of the less powerful Spring PublicMetrics
 
 server:
-  port: 80
+  port: 8080
   compression.enabled: false
   #compression.mime-types: "text/html,text/xml,text/plain,text/css,application/json,application/xml,application/javascript,image/svg+xml"
 
