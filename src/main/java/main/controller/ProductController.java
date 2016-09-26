@@ -20,7 +20,7 @@ public class ProductController {
 
     @RequestMapping("/product/{id}")
     public String getProduct(@PathVariable("id") String id, Model model) throws Exception {
-        InputStream is = new FileInputStream(new File("src/main/resources/products/id" + id + ".json"));
+        InputStream is = new FileInputStream(new File("src/main/resources/static/products/id" + id + ".json"));
         model.addAttribute("model", objectMapper.readValue(is, ExtendedProduct.class));
 
         return "product-detail";

@@ -1,9 +1,9 @@
-<div class="product-list-container" xmlns:th="http://www.thymeleaf.org">
+<div class="product-list-container" xmlns:th="http://www.thymeleaf.org"
+	ng-controller="ProductListCtrl">
     <!--th:class="${product.id % 3 !=0} ? 'margin-right'"-->
     <div class="col-2" th:each="product: ${model}">
         <a class="product-column"
-
-           th:href="@{'/product/'+${product.id}}">
+           th:attr="ng-click=|@{'viewProduct('+${product.id}+')'}|">
         <span class="price-tag" th:if="${product.offer.discount}">
           <p>ONLY</p>
           <p>MINS LEFT</p>

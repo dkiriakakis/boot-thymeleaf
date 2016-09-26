@@ -19,7 +19,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public String greeting(Model model) throws Exception {
-        InputStream is = new FileInputStream(new File("src/main/resources/products/all.json"));
+        InputStream is = new FileInputStream(new File("src/main/resources/static/products/all.json"));
         model.addAttribute("model", objectMapper.readValue(is, Product[].class));
 
         return "home";
