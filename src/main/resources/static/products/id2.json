@@ -31,7 +31,21 @@
       "1": "../images/id2/thumbnails/id2_1t.jpg",
       "2": "../images/id2/thumbnails/id2_2t.jpg",
       "3": "../images/id2/thumbnails/id2_3t.jpg"
-    }
+    },
+    "all": [
+      {
+        "normal": "images/id2/normal/id2_1.jpg",
+        "thumbnail": "images/id2/thumbnails/id2_1t.jpg"
+      },
+      {
+        "normal": "images/id2/normal/id2_2.jpg",
+        "thumbnail": "images/id2/thumbnails/id2_2t.jpg"
+      },
+      {
+        "normal": "images/id2/normal/id2_3.jpg",
+        "thumbnail": "images/id2/thumbnails/id2_3t.jpg"
+      }
+    ]
 
   }
 }

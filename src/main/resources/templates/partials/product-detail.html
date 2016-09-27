@@ -1,0 +1,91 @@
+<div class="product-image-viewer">
+    <div class="product-images">
+        <div class="product-photo" ng-repeat="img in product.pictures.all"
+             ng-class="{active: mainImageUrl==img.normal}" >
+            <img ng-src="{{img.normal}}">
+        </div>
+    </div>
+    <ul class="product-thumbs">
+        <li ng-repeat="img in product.pictures.all">
+            <img ng-src="{{img.thumbnail}}" ng-click="setImage(img)">
+        </li>
+    </ul>
+    <span class="price-tag" ng-if="product.offer.discount">
+          <p>ONLY</p>
+        <!-- Timer directive is being used for our countdown, we use {{mminutes}} and {{sseconds}} so as to print
+        2-digit values (e.g. 01, 02) -->
+          <timer countdown="product.offer.countDown" interval="1000" finish-callback="countDownFinished($index)">{{mminutes}}:{{sseconds}}</timer>
+          <p>MINS LEFT</p>
+        </span>
+    <button class="button basket basket-top">Add to basket</button>
+</div>
+
+<div class="product-info-viewer">
+    <div class="product-info-desc">
+        <h1>{{product.name}}</h1>
+
+        <h2>Description:</h2>
+        <p>{{product.description}}</p>
+    </div>
+
+    <div class="product-info-other">
+        <div class="product-info-rating">
+            <!--In the mockups filling part of the star is being presented but in the json files rating is an integer
+            value, so we assume that it's always an integer.-->
+            <span class="fa fa-star" ng-class="{'full-star' : product.rating>0}"></span>
+            <span class="fa fa-star" ng-class="{'full-star' : product.rating>1}"></span>
+            <span class="fa fa-star" ng-class="{'full-star' : product.rating>2}"></span>
+            <span class="fa fa-star" ng-class="{'full-star' : product.rating>3}"></span>
+            <span class="fa fa-star" ng-class="{'full-star' : product.rating>4}"></span>
+            <p>{{product.rating}} out of 5 stars</p>
+        </div>
+        <div class="product-info-price">
+            <div class="full-price" ng-class="{'price-strikethrough' : product.offer.discount}">
+                &euro; {{product.price}}.00
+            </div>
+            <br>
+            <div class="offer-price" ng-if="product.offer.discount">
+                &euro; {{product.offer.discountedPrice}}.00
+            </div>
+
+            <p>price incl. vat</p>
+            <p>excl. shipping</p>
+        </div>
+        <button class="button basket basket-side">Add to basket</button>
+    </div>
+    <div class="spec-list">
+
+        <div class="spec-stable"
+             ng-click="toggleSpecs(0)"
+             ng-class="{active: isSpecsShown(0)}">
+            <i class="fa" ng-class="isSpecsShown(0) ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+            Technical Specifications
+        </div>
+        <div class="spec-details">
+            <div class="spec spec-accordion row"
+                 ng-repeat="(key, spec) in product.specifications.technical"
+                 ng-show="isSpecsShown(0)">
+                <div class="col-3">{{key}}</div>
+                <div class="col-3">{{spec}}</div>
+            </div>
+        </div>
+        <div class="spec-stable"
+             ng-click="toggleSpecs(1)"
+             ng-class="{active: isSpecsShown(1)}">
+            <i class="fa" ng-class="isSpecsShown(1) ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+            Other Specifications
+        </div>
+        <div class="spec-details">
+            <div class="spec spec-accordion row"
+                 ng-repeat="(key, spec) in product.specifications.other"
+                 ng-show="isSpecsShown(1)">
+                <div class="col-3">{{key}}</div>
+                <div class="col-3">{{spec}}</div>
+            </div>
+        </div>
+    </div>
+    <!--<button class="button back" ng-click="return()">Go back</button>-->
+    <button class="button basket basket-bottom">Add to basket</button>
+
+
+</div>

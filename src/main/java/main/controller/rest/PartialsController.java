@@ -17,7 +17,7 @@ public class PartialsController {
     @RequestMapping(value = "/partials", method = RequestMethod.GET)
     public String getPartial(@RequestParam(required = true, value = "partial") String partial) throws IOException, URISyntaxException {
         return new String(Files.readAllBytes(
-                Paths.get(getClass().getClassLoader().getResource("templates/" + partial).toURI())), "UTF-8");
+                Paths.get(getClass().getClassLoader().getResource("static/templates/" + partial).toURI())), "UTF-8");
     }
 
 

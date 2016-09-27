@@ -32,6 +32,20 @@
       "1": "../images/id3/thumbnails/id3_1t.jpg",
       "2": "../images/id3/thumbnails/id3_2t.jpg",
       "3": "../images/id3/thumbnails/id3_3t.jpg"
-    }
+    },
+    "all": [
+      {
+        "normal": "images/id3/normal/id3_1.jpg",
+        "thumbnail": "images/id3/thumbnails/id3_1t.jpg"
+      },
+      {
+        "normal": "images/id3/normal/id3_2.jpg",
+        "thumbnail": "images/id3/thumbnails/id3_2t.jpg"
+      },
+      {
+        "normal": "images/id3/normal/id3_3.jpg",
+        "thumbnail": "images/id3/thumbnails/id3_3t.jpg"
+      }
+    ]
   }
 }

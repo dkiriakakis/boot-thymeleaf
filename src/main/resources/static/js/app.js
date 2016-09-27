@@ -16,14 +16,11 @@ webshopApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/home', {
-        templateUrl: 'partials/product-list.html',
+        templateUrl: '/templates/partials/product-list.html',
         controller: 'ProductListCtrl'
       }).
       when('/products/:productId', {
-        templateUrl: 'partials/product-detail.html',
+        templateUrl: '/templates/partials/product-detail.html',
         controller: 'ProductDetailCtrl'
-      }).
-      otherwise({
-        redirectTo: '/home'
       });
   }]);

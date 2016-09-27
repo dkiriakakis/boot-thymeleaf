@@ -36,5 +36,9 @@ public class MvcConfig extends WebMvcConfigurerAdapter
         registry.addResourceHandler("/fonts/**")
                 .addResourceLocations("classpath:/static/fonts/")
                 .setCachePeriod(3600*24);
+
+        registry.addResourceHandler("/templates/**")
+                .addResourceLocations("classpath:/templates/")
+                .setCachePeriod(3600*24);
     }
 }
