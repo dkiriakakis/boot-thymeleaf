@@ -1,5 +1,5 @@
-<div class="product-list-container" xmlns:th="http://www.thymeleaf.org"
-	ng-controller="ProductListCtrl">
+<div class="product-list-container" xmlns:th="http://www.thymeleaf.org" style="height: 400px;"
+	ng-controller="ProductListCtrl" ng-hide="hideProductList()">
     <!--th:class="${product.id % 3 !=0} ? 'margin-right'"-->
     <div class="col-2" th:each="product: ${model}">
         <a class="product-column"
@@ -31,7 +31,7 @@
 
 </div>
 
-<div class="product-list-container" ng-view="">
+<div class="product-list-container" ng-view="" style="margin-bottom: 100px;">
 
 </div>
 

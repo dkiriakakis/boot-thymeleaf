@@ -10,6 +10,10 @@ webshopControllers.controller('ProductListCtrl', ['$scope', 'Product', '$locatio
     
     $scope.orderProp = 'id';
 
+    $scope.hideProductList = function() {
+      return $location.path().indexOf('products') !== -1;
+    }
+
     $scope.viewProduct = function(pId){
       $location.path('/products/'+pId); 
     }
